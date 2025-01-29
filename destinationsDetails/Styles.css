@@ -1,0 +1,321 @@
+:root {
+    --blue: #0080ff;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    border: none;
+    text-decoration: none;
+    transition: all .5s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem 9%;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    color: var(--blue);
+}
+
+header .navbar a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+
+header .navbar a:hover {
+    color: var(--blue);
+}
+
+header .icon i {
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+header .icon i:hover {
+    color: var(--blue);
+}
+
+header .search-form {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #333;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    padding: 1.5rem 2rem;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-form.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-form #search-bar {
+    width: 100%;
+    padding: 1rem;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .search-form label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-form label:hover {
+    color: var(--blue);
+}
+
+#menu-bar {
+    color: #fff;
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 990px) {
+    #menu-bar {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #333;
+        border-top: .1rem solid rgba(255, 255, 255, .2);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: #222;
+    }
+
+    html {
+        font-size: 50%;
+    }
+}
+.small-container.single-product {
+    margin-top: 80px; /* مسافة من الأعلى */
+    padding: 20px; /* مسافة داخلية */
+    background: #fff; /* خلفية بيضاء */
+    border-radius: 10px; /* زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    
+}
+.product-image {
+    margin-left: 250px;
+    width: 100%; /* عرض الصورة بنسبة 100% من العنصر الذي يحتويها */
+    max-width: 700px; /* أقصى عرض للصورة */
+    height: auto; /* الارتفاع يتكيف تلقائيًا */
+    border-radius: 10px; /* زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+.row {
+    display: flex; /* جعل العناصر تظهر في صف واحد */
+    align-items: flex-start; /* محاذاة العناصر من الأعلى */
+    gap: 20px; /* مسافة بين الصورة والنص */
+}
+
+.col-2 {
+    flex: 1; /* كل قسم يأخذ مساحة متساوية */
+    padding: 10px; /* مسافة داخلية */
+}
+
+.col-2 img {
+    max-width: 100%; /* الصورة تأخذ العرض الكامل */
+    max-width: 500px;
+    height: auto; /* الارتفاع يتكيف تلقائيًا */
+    border-radius: 15px; /* زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.col-2 h1 {
+    font-size: 36px; /* حجم الخط */
+    line-height: 1.5; /* ارتفاع السطر */
+    margin-bottom: 20px; /* مسافة أسفل العنوان */
+}
+
+.col-2 p {
+    font-size: 16px; /* حجم الخط */
+    color: #555; /* لون النص */
+    margin-bottom: 20px; /* مسافة أسفل الفقرة */
+}
+
+.col-2 .btn {
+    display: inline-block;
+    background: #0080ff; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* مسافة داخلية */
+    border-radius: 30px; /* زوايا مدورة */
+    transition: background 0.5s; /* تأثير التحويم */
+}
+
+.col-2 .btn:hover {
+    background: #563434; /* لون الخلفية عند التحويم */
+}
+.small-img-row {
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-between; /* توزيع الصور بشكل متساوٍ */
+    gap: 10px; /* مسافة بين الصور */
+    margin-top: 20px; /* مسافة من الأعلى */
+}
+.small-img-col {
+    flex-basis: 24%; /* عرض كل عمود */
+    cursor: pointer; /* تغيير المؤشر إلى يد */
+    border: 2px solid #ddd; /* حدود خفيفة */
+    border-radius: 10px; /* زوايا مدورة */
+    overflow: hidden; /* إخفاء الأجزاء الزائدة */
+    transition: transform 0.3s, border-color 0.3s; /* تأثيرات التحويم */
+}
+
+.small-img-col:hover {
+    transform: translateY(-5px); /* تحريك الصورة لأعلى قليلاً */
+    border-color: #0080ff; /* تغيير لون الحدود عند التحويم */
+}
+.small-img {
+    width: 100%; /* عرض الصورة بالكامل */
+    height: 100px; /* ارتفاع ثابت للصور الصغيرة */
+    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع دون تشويه */
+    display: block; /* تجنب المسافات الزائدة */
+}
+.small-img-col img {
+    width: 100%; /* عرض الصورة بالكامل */
+    height: 100px; /* ارتفاع ثابت */
+    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع دون تشويه */
+    border-radius: 10px; /* زوايا مدورة */
+    transition: transform 0.3s; /* تأثير التحويم */
+}
+
+.small-img-col img:hover {
+    transform: scale(1.1); /* تكبير الصورة قليلاً عند التحويم */
+}
+.footer {
+    background: #333;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a {
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+    display: block;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.footer .created {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+.footer .created span {
+    color: var(--blue);
+}
+
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.alert {
+    margin: 0;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
